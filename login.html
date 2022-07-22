@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+</head>
+<body>
+    <div class="login-form">
+        <!-- <form> -->
+            <div class="form-title">
+                Puzzle Login Form
+            </div>
+            <div class="form-input">
+                <label for="username">Name</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="form-input">
+                <label for="email">Email</label>
+                <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+            </div>
+            <div class="captcha">
+                <label for="captcha-input">Enter Captcha</label>
+                <input class="preview" type="text" id="capt" readonly >
+                <div class="captcha-form">
+                    <input type="text" id="textInput" placeholder="Enter captcha text" >
+                    <button class="captcha-refresh">
+                        <img src="refresh.jpg" width="40px" onclick="cap()">
+                    </button>
+                </div>
+            </div>
+            <div class="form-input">
+                <button id="login-btn" onclick="validCap()">Login</button>
+            </div>
+        <!-- </form> -->
+    </div>
+</body>
+</html>
